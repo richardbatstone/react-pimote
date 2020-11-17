@@ -10,7 +10,7 @@ function turnLightOn(e) {
   axios({
     headers: headers,
     method: 'post',
-    url: 'http://35.192.53.13/sockets/',
+    url: 'https://pimote-server.herokuapp.com/sockets/',
     data: '{"socket_1":true, "socket_2":false}'
   });
 }
@@ -20,7 +20,7 @@ function turnLightOff(e) {
   axios({
     headers: headers,
     method: 'post',
-    url: 'http://35.192.53.13/sockets/',
+    url: 'https://pimote-server.herokuapp.com/sockets/',
     data: '{"socket_1":false, "socket_2":false}'
   });
 }
