@@ -7,22 +7,32 @@ const headers = {
 
 function turnLightOn(e) {
   console.log("turn it on")
-  axios({
-    headers: headers,
-    method: 'post',
-    url: 'https://pimote-server.herokuapp.com/sockets/',
-    data: '{"socket_1":true, "socket_2":false}'
-  });
+  var i;
+  for (i = 0; i < 5; i++) {
+    window.setTimeout(
+    axios({
+      headers: headers,
+      method: 'post',
+      url: 'https://pimote-server.herokuapp.com/sockets/',
+      data: '{"socket_1":true, "socket_2":false}'
+    }),
+    200);
+  }
 }
 
 function turnLightOff(e) {
   console.log("turn it off")
-  axios({
-    headers: headers,
-    method: 'post',
-    url: 'https://pimote-server.herokuapp.com/sockets/',
-    data: '{"socket_1":false, "socket_2":false}'
-  });
+  var i;
+  for (i = 0; i < 5; i++) {
+    window.setTimeout(
+    axios({
+      headers: headers,
+      method: 'post',
+      url: 'https://pimote-server.herokuapp.com/sockets/',
+      data: '{"socket_1":false, "socket_2":false}'
+    }),
+    200);
+  }
 }
 
 function App() {
