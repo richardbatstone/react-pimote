@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <p>
-        Turn Charlotte's reading light:
+        Turn the Bat(stone) signal:
       </p>
       <button onClick={turnLightOn}>On</button>
       <button onClick={turnLightOff}>Off</button>
